@@ -32,7 +32,7 @@ public class commitTest extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		PrintWriter out = response.getWriter();
-		out.print("hello sublet");
+		out.print("hello suvlet");
 	}
 
 	/**
