@@ -10,9 +10,10 @@
 <body>
 	<table border="1">
 		<%
-			Enumeration e = session.getAttributeNames();
+			Enumeration<String> e = session.getAttributeNames();
+		
 			while (e.hasMoreElements()) {
-				String eName = (String) e.nextElement();
+				String eName =  e.nextElement();
 				String eVal = (String) session.getAttribute(eName);
 		%>
 		<tr>

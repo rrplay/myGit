@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%= request.getCharacterEncoding()%><br>
+<%request.setCharacterEncoding("UTF-8"); %>
+<%= request.getCharacterEncoding()%><br>
 	<%=request.getParameter("myId")%><br>
 	<%=request.getParameter("myName")%><br>
 	<%=request.getParameter("email")%><br>

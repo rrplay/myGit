@@ -12,7 +12,7 @@
 		<table border="1">
 			<tr>
 				<td>아이디</td>
-				<td><input type="text" name="myIdd"></td>
+				<td><input type="text" name="myId"></td>
 			</tr>
 			<tr>
 				<td>이름</td>
