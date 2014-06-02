@@ -11,15 +11,14 @@
 <body>
 	hello my world
 	<%--<<<<<<< HEAD --%>
-		<%
-			SimpleDateFormat sdf = new SimpleDateFormat(
-					"yyyy년 MM월 dd일 hh시 mm분 ss초 sss");
-		%>
-		isNew :
-		<%=session.isNew()%><br> 생성시간:
-		<%=sdf.format(new Date(session.getCreationTime()))%><br> 최종접속시간:
-		<%=sdf.format(new Date(session.getLastAccessedTime()))%><br>
-		<%-- >>>>>>> refs/heads/firstBranch--%>
+	<%
+		SimpleDateFormat sdf = new SimpleDateFormat(
+				"yyyy년 MM월 dd일 hh시 mm분 ss초 sss");
+	%><br> isNew :
+	<%=session.isNew()%><br> 생성시간:
+	<%=sdf.format(new Date(session.getCreationTime()))%><br> 최종접속시간:
+	<%=sdf.format(new Date(session.getLastAccessedTime()))%><br>
+	<%-- >>>>>>> refs/heads/firstBranch--%>
 
 
 	<form action="/gitJspTest/outputJsp.jsp" method="post">
