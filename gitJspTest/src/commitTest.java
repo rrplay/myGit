@@ -2,6 +2,7 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,7 +33,11 @@ public class commitTest extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		PrintWriter out = response.getWriter();
-		out.print("hello sublet");
+		out.print("hello suvlet");
+		
+		RequestDispatcher rd = request.getRequestDispatcher("testJsp.jsp");
+		rd.forward(request, response);
+		
 	}
 
 	/**
