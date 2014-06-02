@@ -1,3 +1,5 @@
+<%@page import="java.sql.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -8,6 +10,18 @@
 </head>
 <body>
 	hello my world
+	<%--<<<<<<< HEAD --%>
+		<%
+			SimpleDateFormat sdf = new SimpleDateFormat(
+					"yyyy년 MM월 dd일 hh시 mm분 ss초 sss");
+		%>
+		isNew :
+		<%=session.isNew()%><br> 생성시간:
+		<%=sdf.format(new Date(session.getCreationTime()))%><br> 최종접속시간:
+		<%=sdf.format(new Date(session.getLastAccessedTime()))%><br>
+		<%-- >>>>>>> refs/heads/firstBranch--%>
+
+
 	<form action="/gitJspTest/outputJsp.jsp" method="post">
 		<table border="1">
 			<tr>
@@ -24,10 +38,13 @@
 			</tr>
 			<tr>
 				<td><input type="submit" value="입력"></td>
-
 			</tr>
-
 		</table>
+		<%--======= --%>
+		<br>
+
+
+
 	</form>
 </body>
 </html>
